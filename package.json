@@ -1,0 +1,27 @@
+{
+  "name": "vue-custom-cookies",
+  "version": "0.1.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vue-custom-cookies.umd.cjs",
+  "module": "./dist/vue-custom-cookies.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-custom-cookies.js",
+      "require": "./dist/vue-custom-cookies.umd.js"
+    },
+    "./dist/style.css": "./dist/vue-custom-cookies.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5"
+  }
+}
