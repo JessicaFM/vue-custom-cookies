@@ -44,7 +44,8 @@ function acceptCookies() {
 
 function declineCookies() {
     var expires = new Date();
-    expires.setTime(expires.getTime() + (expires * 24 * 60 * 60 * 1000));
+    expires.setDate(expires.getDate() + parseInt(props.expired));
+    expires.setTime(expires.getTime() + (24 * 60 * 60 * 1000));
     document.cookie = "vue-cookies=0;expires=" + expires.toUTCString();
     document.querySelector('.vue-cookies').style.display = 'none';
     showCookies.value = true;
